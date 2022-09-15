@@ -53,6 +53,46 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests); //这样会跳过0个客人，输出为默认值10
+
+// 只有null和undefined对？？(非空运算符)来说是false(NOT 0 or '')
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
+
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Pizza',
+  owner: 'Gloria',
+};
+
+//OR assignment operator
+// rest2.numGuests = rest2.numGuests || 10;
+// rest1.numGuests = rest1.numGuests || 10;
+// 和上面相同的
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// 解决客人为空时判断为false的问题
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+//AND assignment operator
+// rest1.owner = rest1.owner && '<KFC>';
+// rest2.owner = rest2.owner && '<KFC>';
+rest1 &&= '<KFC>';
+rest1 &&= '<KFC>';
+
+console.log(rest1);
+console.log(rest2);
+
+/*
 //&& & ||(OR)
 
 console.log('-------OR----------');
