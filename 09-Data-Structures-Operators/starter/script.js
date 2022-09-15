@@ -53,6 +53,7 @@ const restaurant = {
   },
 };
 
+/*
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests); //这样会跳过0个客人，输出为默认值10
@@ -93,7 +94,7 @@ rest2.owner &&= '<KFC>';
 
 console.log(rest1);
 console.log(rest2);
-
+*/
 /*
 //&& & ||(OR)
 
