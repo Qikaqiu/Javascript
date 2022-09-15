@@ -72,6 +72,7 @@ const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
 console.log('----------AND----------');
+let test = 1;
 
 /*
 //SPREAD解构，因为在=右边
