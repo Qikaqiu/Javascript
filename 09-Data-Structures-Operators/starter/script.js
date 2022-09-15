@@ -84,10 +84,12 @@ rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
 //AND assignment operator
+//因为rest1里面没有owner，所以第一个判断为false，任然没改变
+//rest2里面有owner，判断为true，返回最后一个值，即改为KFC
 // rest1.owner = rest1.owner && '<KFC>';
 // rest2.owner = rest2.owner && '<KFC>';
-rest1 &&= '<KFC>';
-rest1 &&= '<KFC>';
+rest1.owner &&= '<KFC>';
+rest2.owner &&= '<KFC>';
 
 console.log(rest1);
 console.log(rest2);
@@ -122,6 +124,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+*/
 
 /*
 //SPREAD解构，因为在=右边
