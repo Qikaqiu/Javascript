@@ -72,7 +72,16 @@ const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
 console.log('----------AND----------');
-let test = 1;
+//输出第一个为false/null值，如果都没有，返回最后一个数值
+console.log(0 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'Jonas');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('蘑菇', '洋葱');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 /*
 //SPREAD解构，因为在=右边
